@@ -1,5 +1,18 @@
+## About
+
 This is a simple hits/miss panel for Johnny cache.
+
+## Installation
+
+```bash
+pip install git+git://github.com/streeter/johnny-panel.git#egg=johnny_panel
+```
+
+## Usage
+
 To use, add this to your settings,py file:
+
+```python
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
     'debug_toolbar.panels.timer.TimerDebugPanel',
@@ -13,3 +26,4 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.logger.LoggingPanel',
     'johnny_panel.panel.JohnnyPanel'
 )
+```
