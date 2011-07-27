@@ -1,0 +1,36 @@
+<p style="font-size:20px;"> Hits: {{ hits }}</p>
+<p style="font-size:20px;"> Misses: {{ misses }}</p>
+
+<h4>Hits:</h4>
+<table>
+    <tr>
+        <td><b>Key</b></td>
+        <td><b>Tables</b></td>
+        <td><b>Query</b></td>
+    </tr>
+        
+    {% for hit in collector.hits %}
+    <tr>
+        <td>{{ hit.key }}</td>
+        <td>{{ hit.tables }}</td>
+        <td>{{ hit.query }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h4>Misses:</h4>
+<table>
+    <tr>
+        <td><b>Key</b></td>
+        <td><b>Tables</b></td>
+        <td><b>Query</b></td>
+    </tr>
+        
+    {% for miss in collector.misses %}
+    <tr>
+        <td>{{ miss.key }}</td>
+        <td>{{ miss.tables }}</td>
+        <td>{{ miss.query }}</td>
+    </tr>
+    {% endfor %}
+</table>
