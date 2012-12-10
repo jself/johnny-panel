@@ -10,7 +10,16 @@ pip install git+git://github.com/streeter/johnny-panel.git#egg=johnny_panel
 
 ## Usage
 
-To use, add this to your settings,py file:
+1. Add `johnny_panel` to your `INSTALLED_APPS` setting (needed for template file):
+
+```python
+INSTALLED_APPS = (
+    ...
+    'johnny_panel',
+)
+```
+
+2. Add `johnny_panel.panel.JohnnyPanel` to your `DEBUG_TOOLBAR_PANELS` setting:
 
 ```python
 DEBUG_TOOLBAR_PANELS = (
